@@ -208,6 +208,15 @@
      run: npm test
    ```
 
+3. **測試覆蓋率檢查**：
+   在發佈前檢查測試覆蓋率：
+   ```yaml
+   - name: Check test coverage
+     run: |
+       npm run test:coverage
+       codecov
+   ```
+
 ---
 
 透過以上設定，當你將程式推送到 `release` 分支後，GitHub Actions 會自動打包、測試並發佈到 npm，並通過 CDN 提供服務！
