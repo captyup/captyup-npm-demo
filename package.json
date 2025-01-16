@@ -1,6 +1,6 @@
 {
   "name": "captyup-npm-demo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A demo npm package with GitHub Actions auto-publish",
   "main": "index.js",
   "scripts": {
