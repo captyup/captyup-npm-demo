@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
       - uses: actions/setup-node@v3
         with:
           node-version: '22.x'
@@ -17,6 +20,18 @@ jobs:
       
       - name: Install dependencies
         run: npm ci || npm install
+      
+      - name: Check version
+        id: check
+        run: |
+          PUBLISHED_VERSION=$(npm view ${{ github.event.repository.name }} version 2>/dev/null || echo "0.0.0")
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          if [ "$PUBLISHED_VERSION" = "$PACKAGE_VERSION" ]; then
+            echo "Version $PACKAGE_VERSION already exists. Please update version in package.json"
+            exit 1
+          fi
+          echo "Current version: $PACKAGE_VERSION"
+          echo "Published version: $PUBLISHED_VERSION"
       
       - name: Run tests with coverage
         run: npm run test:coverage

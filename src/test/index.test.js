@@ -1,4 +1,4 @@
-const { greet } = require('./index');
+const { greet } = require('../index');
 
 describe('greet function', () => {
     test('should return correct greeting message', () => {
