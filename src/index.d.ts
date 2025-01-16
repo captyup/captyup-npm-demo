@@ -1,4 +1,4 @@
-declare module 'captyup-npm-demo' {
+declare module 'CaptyupNpmDemo' {
     /**
      * Say hello to someone.
      * @param name - The name of the person.
