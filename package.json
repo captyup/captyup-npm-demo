@@ -2,7 +2,8 @@
   "name": "captyup-npm-demo",
   "version": "1.0.2",
   "description": "A demo npm package with GitHub Actions auto-publish",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "files": ["dist"],
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"branches\": 80,\"functions\": 80,\"lines\": 80,\"statements\": 80}}'",
