@@ -183,6 +183,39 @@
 
 ---
 
+## **瀏覽器使用說明**
+
+### 在瀏覽器中使用
+
+你可以透過以下方式在瀏覽器中使用：
+
+1. 直接使用 CDN（推薦）：
+
+```html
+<!-- 使用 unpkg -->
+<script src="https://unpkg.com/captyup-npm-demo@latest/dist/index.browser.min.js"></script>
+
+<!-- 或使用 jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/captyup-npm-demo@latest/dist/index.browser.min.js"></script>
+```
+
+2. 下載後本地引用：
+
+```html
+<script src="path/to/dist/index.browser.min.js"></script>
+```
+
+引入後，你可以透過全域變數 `captyupNpmDemo` 來使用：
+
+```html
+<script>
+  // 你的套件功能會掛載在 window.captyupNpmDemo 下
+  const result = captyupNpmDemo.yourFunction();
+</script>
+```
+
+---
+
 ## **可選優化**
 
 1. **自動版本更新**：

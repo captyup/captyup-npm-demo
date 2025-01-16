@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>captyup-npm-demo Browser Demo</title>
+</head>
+<body>
+    <h1>captyup-npm-demo 瀏覽器示範</h1>
+    
+    <!-- 使用 CDN 引入套件 -->
+    <script src="https://unpkg.com/captyup-npm-demo@latest/dist/index.browser.min.js"></script>
+    
+    <script>
+        // 使用套件功能
+        try {
+            const result = captyupNpmDemo.greet();
+            console.log('套件執行結果：', result);
+        } catch (error) {
+            console.error('執行錯誤：', error);
+        }
+    </script>
+</body>
+</html>
